@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-icon name="more" (click)="openFirst()" slot="start"></ion-icon>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+      <ion-row>
+          <ion-col >
+              <ion-card *ngFor="let item of imgArr;index as i ">
+                  <ion-card-header>
+                    <img [src]='item.src'/>
+                    <ion-card-title (click)="indexPrint(i)">{{item.title}}</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content> 
+                    Keep close to Nature's heart... and break clear away, once in awhile,
+                    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+                  </ion-card-content>
+              </ion-card>
+                
+          </ion-col>
+        
+          <!-- <ion-col size-lg="4" size-md="6" size-xs="12">
+            ion-col [size="12"] [size-sm]
+          </ion-col> -->
+      </ion-row>
+  </ion-grid>
+
+
+</ion-content>

@@ -1,0 +1,26 @@
+
+
+<ion-header>
+  <ion-toolbar>
+      <ion-icon name="more" (click)="openFirst()" slot="start"></ion-icon>
+    <ion-title>
+      Tab Three
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-button (click)="presentModal()">open Modal</ion-button>
+  <ion-text>
+    <h5>{{theTestReturn}}</h5>
+  </ion-text>
+
+  <div class = "card">
+      <div class = "item">
+         This is a Ionic card without item-text-wrap class.
+      </div>
+      
+      <div class = "item item-text-wrap">
+         This is a Ionic card with item-text-wrap class.
+      </div>
+   </div>
+</ion-content>

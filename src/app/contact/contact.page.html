@@ -1,0 +1,64 @@
+<div style="background-image: url('http://wonderfulengineering.com/wp-content/uploads/2016/01/wallpaper-for-mobile-46.jpg'); width:100%;height:100%">
+<!-- 
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contact us</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content > -->
+
+  
+
+
+  <!-- <ion-button shape="round" color="primary" fill="outline" (click)="showBannerAd()">Show Banner Ad</ion-button>  -->
+
+  <!-- Ionic4 Freaky Admob Example
+  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+ 
+ 
+ 
+  
+  
+  <ion-button shape="round" color="primary" fill="outline" (click)="showInterstitialAds()">Show Interstitial Ads</ion-button>
+ 
+  <ion-button shape="round" color="primary" fill="outline" (click)="showRewardVideoAds()">Show Reward Video Ads</ion-button> -->
+  <ion-toggle [(ngModel)]="toggle" color="success"></ion-toggle>
+  <button  mat-button color="primary" (click)=" goToSecondPage()">Go to Tabs Page</button>
+
+  <div *ngIf="toggle">
+    <div row>
+      
+    </div>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Personal data
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ion-card>
+          <ion-card-header>
+            <img />
+            <ion-card-title>Title</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <form >
+              <ion-item>
+                <ion-label>Todo</ion-label>
+                <ion-input type="text"  name="title"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Description</ion-label>
+                <ion-textarea  name="description"></ion-textarea>
+              </ion-item>
+              <button mat-button color="primary" type="submit"  (click)="hitapi()">Add Todo</button>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div> 
+<!-- </ion-content> -->
+
+</div>
