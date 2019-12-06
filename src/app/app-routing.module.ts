@@ -8,6 +8,7 @@ const routes: Routes = [
   },
   { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
   { path: 'more', loadChildren: './pages/more/more.module#MorePageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
  
 ];
 @NgModule({

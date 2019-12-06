@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { AdMobFree, AdMobFreeBannerConfig,AdMobFreeInterstitialConfig,AdMobFreeRewardVideoConfig } from '@ionic-native/admob-free/ngx';
-import { AdmobFreeService } from '../service/admobfree.service';
 import { TestService } from '../api/test.service';
 
 @Component({
@@ -12,8 +10,7 @@ import { TestService } from '../api/test.service';
 export class ContactPage implements OnInit {
 
   toggle: boolean = true;
-  constructor(public nav:NavController,    private admobFree: AdMobFree,
-    private admobFreeService: AdmobFreeService,
+  constructor(public nav:NavController, 
     private api: TestService,
 
     ) { }

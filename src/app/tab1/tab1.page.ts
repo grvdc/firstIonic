@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular'; //import MenuController to access toggle() method.
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -10,6 +11,8 @@ export class Tab1Page {
 
   constructor(
     public menuCtrl: MenuController,
+    public nav:NavController, 
+
   ) {
     console.log('Tab1');
 
@@ -25,6 +28,14 @@ export class Tab1Page {
 
     this.menuCtrl.enable(true, 'first');
     this.menuCtrl.open('first');
+  }
+  logout(){
+    localStorage.removeItem("data");
+    let data = localStorage.getItem('data');
+    if(!data){
+      this.nav.navigateForward('/login');
+    }
+
   }
 
 }

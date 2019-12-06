@@ -19,7 +19,13 @@ export class AppComponent {
     public menuCtrl: MenuController,
     public nav:NavController
   ) {
+    let data = localStorage.getItem('data');
+   
     this.initializeApp();
+    if(!data){
+      this.nav.navigateForward('/login');
+
+    }
   }
 
   initializeApp() {
